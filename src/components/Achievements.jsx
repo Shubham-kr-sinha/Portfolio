@@ -86,7 +86,7 @@ const Achievements = () => {
                             <div className="text-4xl">💻</div>
                             <div>
                                 <p className="text-dark-400 text-sm">LeetCode</p>
-                                <p className="text-dark-100 font-bold">1600+ Rating</p>
+                                <p className="text-dark-100 font-bold">1700+ Rating</p>
                             </div>
                         </a>
                         <a
@@ -98,7 +98,7 @@ const Achievements = () => {
                             <div className="text-4xl">⚡</div>
                             <div>
                                 <p className="text-dark-400 text-sm">Codeforces</p>
-                                <p className="text-dark-100 font-bold">1400+ Rating</p>
+                                <p className="text-dark-100 font-bold">1100 (Newbie)</p>
                             </div>
                         </a>
                         <a
@@ -112,6 +112,28 @@ const Achievements = () => {
                                 <p className="text-dark-400 text-sm">CodeChef</p>
                                 <p className="text-dark-100 font-bold">Active Solver</p>
                             </div>
+                        </a>
+                    </div>
+                </div>
+
+                {/* Extracurricular Activities */}
+                <div className="mt-16">
+                    <h3 className="text-2xl font-bold text-dark-200 mb-8 text-center">Extracurricular Activities</h3>
+                    <div className="flex justify-center">
+                        <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="card hover:scale-105 transition-transform duration-300 flex items-center gap-4 min-w-[300px] group"
+                        >
+                            <div className="text-4xl group-hover:scale-110 transition-transform duration-300">🎨</div>
+                            <div>
+                                <h4 className="text-xl font-bold text-dark-100 group-hover:text-primary-400 transition-colors">Artwork Gallery</h4>
+                                <p className="text-dark-300 text-sm">Explore my creative side</p>
+                            </div>
+                            <svg className="w-5 h-5 text-primary-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
                         </a>
                     </div>
                 </div>
