@@ -15,15 +15,15 @@ const Achievements = () => {
             linkText: 'View Publication',
         },
         {
-            title: 'LeetCode Rating: 1600+',
-            description: 'Achieved 1600+ rating on LeetCode, demonstrating strong problem-solving skills and algorithmic proficiency',
+            title: 'LeetCode Rating: 1700+',
+            description: 'Achieved 1700+ rating on LeetCode, demonstrating strong problem-solving skills and algorithmic proficiency',
             icon: '💻',
             link: 'https://leetcode.com/u/Shubh_iam/',
             linkText: 'View Profile',
         },
         {
-            title: 'Codeforces Rating: 1400+',
-            description: 'Achieved 1400+ rating (Specialist) on Codeforces, showcasing competitive programming abilities',
+            title: 'Codeforces Rating: 1100 (Newbie)',
+            description: 'Achieved 1100 rating (Newbie) on Codeforces, showcasing competitive programming abilities',
             icon: '⚡',
             link: 'https://codeforces.com/profile/Sammyhero',
             linkText: 'View Profile',
@@ -101,18 +101,7 @@ const Achievements = () => {
                                 <p className="text-dark-100 font-bold">1100 (Newbie)</p>
                             </div>
                         </a>
-                        <a
-                            href="https://www.codechef.com/users/shubhamkrsinha"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="card hover:scale-105 transition-transform duration-300 flex items-center gap-4 min-w-[250px]"
-                        >
-                            <div className="text-4xl">👨‍💻</div>
-                            <div>
-                                <p className="text-dark-400 text-sm">CodeChef</p>
-                                <p className="text-dark-100 font-bold">Active Solver</p>
-                            </div>
-                        </a>
+
                     </div>
                 </div>
 
