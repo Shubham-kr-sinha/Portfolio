@@ -22,8 +22,8 @@ const Achievements = () => {
             linkText: 'View Profile',
         },
         {
-            title: 'Codeforces Rating: 1100 (Newbie)',
-            description: 'Achieved 1100 rating (Newbie) on Codeforces, showcasing competitive programming abilities',
+            title: 'Codeforces Rating: 1200+ (Pupil)',
+            description: 'Achieved 1200+ rating (Newbie) on Codeforces, showcasing competitive programming abilities',
             icon: '⚡',
             link: 'https://codeforces.com/profile/Sammyhero',
             linkText: 'View Profile',
