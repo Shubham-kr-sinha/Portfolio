@@ -110,7 +110,7 @@ const Achievements = () => {
                     <h3 className="text-2xl font-bold text-dark-200 mb-8 text-center">Extracurricular Activities</h3>
                     <div className="flex justify-center">
                         <a
-                            href="#"
+                            href="https://my-artwork-gallary.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="card hover:scale-105 transition-transform duration-300 flex items-center gap-4 min-w-[300px] group"
