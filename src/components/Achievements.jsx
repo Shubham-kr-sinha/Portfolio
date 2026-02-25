@@ -98,7 +98,7 @@ const Achievements = () => {
                             <div className="text-4xl">⚡</div>
                             <div>
                                 <p className="text-dark-400 text-sm">Codeforces</p>
-                                <p className="text-dark-100 font-bold">1100 (Newbie)</p>
+                                <p className="text-dark-100 font-bold">1200+ (Pupil)</p>
                             </div>
                         </a>
 
