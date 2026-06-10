@@ -1,57 +1,111 @@
-const About = () => {
-    return (
-        <section id="about" className="py-20 bg-dark-900">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="section-title animate-fade-in-up">About Me</h2>
+import { useEffect, useState } from 'react';
 
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                    {/* Profile Image */}
-                    <div className="relative group animate-fade-in-left">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-                        <div className="relative bg-dark-800 rounded-2xl p-8 border border-dark-700">
-                            <div className="aspect-square rounded-xl overflow-hidden">
+const About = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        setIsVisible(true);
+    }, []);
+
+    const metrics = [
+        { label: 'Academic Path', value: 'B.Tech CSE', detail: 'VIT Chennai', icon: '🎓' },
+        { label: 'Problem Solving', value: '400+ Solved', detail: 'LeetCode & CF', icon: '⚡' },
+        { label: 'IEEE Papers', value: '1 Published', detail: 'Best Paper Award', icon: '📄' },
+        { label: 'MERN Apps', value: '5+ Built', detail: 'End-to-End Stack', icon: '🚀' },
+    ];
+
+    return (
+        <section id="about" className="py-24 bg-dark-900/50 relative overflow-hidden">
+            {/* Background elements */}
+            <div className="absolute top-1/2 left-0 -translate-y-1/2 w-72 h-72 bg-violet-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+            <div className="absolute inset-0 cyber-dots opacity-20 pointer-events-none"></div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="text-center mb-16">
+                    <p className="text-xs font-mono tracking-widest text-primary-400 uppercase mb-2">Discovery</p>
+                    <h2 className="section-title mb-0">About Me</h2>
+                </div>
+
+                <div className="grid lg:grid-cols-12 gap-16 items-center">
+                    {/* Left Column - Cyber Portrait Frame */}
+                    <div className="lg:col-span-5 relative group animate-slide-in-left">
+                        {/* Interactive multi-layered frames */}
+                        <div className="absolute -inset-2 bg-gradient-to-tr from-primary-500 via-indigo-600 to-fuchsia-500 rounded-3xl blur-md opacity-30 group-hover:opacity-60 transition duration-700"></div>
+                        
+                        {/* Decorative HUD corners */}
+                        <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary-400 rounded-tl-3xl z-20"></div>
+                        <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-primary-400 rounded-tr-3xl z-20"></div>
+                        <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-primary-400 rounded-bl-3xl z-20"></div>
+                        <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-primary-400 rounded-br-3xl z-20"></div>
+
+                        {/* Image Wrapper */}
+                        <div className="relative bg-dark-950/80 rounded-3xl p-3 border border-white/10 overflow-hidden">
+                            <div className="aspect-square rounded-2xl overflow-hidden relative group">
                                 <img
                                     src="/profile.png"
                                     alt="Shubham Kumar Sinha"
-                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                    className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
                                 />
+                                {/* Overlay scanlines or shading */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent opacity-60"></div>
+                                <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center z-10">
+                                    <span className="px-3 py-1 bg-primary-500/10 backdrop-blur-md border border-primary-500/30 text-primary-300 text-xs font-semibold rounded-lg">
+                                        Developer
+                                    </span>
+                                    <span className="px-3 py-1 bg-fuchsia-500/10 backdrop-blur-md border border-fuchsia-500/30 text-fuchsia-300 text-xs font-semibold rounded-lg">
+                                        ML Explorer
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* About Text */}
-                    <div className="space-y-6 animate-fade-in-right">
-                        <p className="text-lg text-dark-300 leading-relaxed">
-                            I'm a passionate <span className="text-primary-400 font-semibold">Full-Stack MERN Developer</span> with
-                            a strong foundation in building scalable web applications. My expertise spans across MongoDB, Express.js,
-                            React, and Node.js, enabling me to create end-to-end solutions that deliver exceptional user experiences.
-                        </p>
+                    {/* Right Column - Profile Bio and HUD Metrics */}
+                    <div className="lg:col-span-7 space-y-8 text-left animate-slide-in-right">
+                        <div className="space-y-6">
+                            <h3 className="text-3xl font-extrabold text-dark-50 tracking-tight">
+                                Crafting clean web systems & smart ML applications.
+                            </h3>
+                            <p className="text-lg text-dark-300 leading-relaxed font-light">
+                                I am a <span className="text-primary-400 font-semibold font-mono">Full-Stack MERN Developer</span> with a strong love for backend stability and frontend aesthetics. My work is focused on building high-performance architectures using Node.js, Express, React, and MongoDB that satisfy client demands.
+                            </p>
+                            <p className="text-lg text-dark-300 leading-relaxed font-light">
+                                Beyond the web stack, I dive into <span className="text-fuchsia-400 font-semibold font-mono">Machine Learning</span> pipelines. I've designed and validated models for complex datasets, including classification systems for nanoplastic particles and prediction algorithms for aviation delays.
+                            </p>
+                            <p className="text-lg text-dark-300 leading-relaxed font-light">
+                                Currently pursuing a <span className="text-primary-400 font-semibold">B.Tech in Computer Science and Engineering</span> at Vellore Institute of Technology (VIT), Chennai. I love taking part in hackathons, publishing research papers, and improving my algorithms daily.
+                            </p>
+                        </div>
 
-                        <p className="text-lg text-dark-300 leading-relaxed">
-                            Beyond web development, I'm deeply fascinated by <span className="text-primary-400 font-semibold">Machine Learning</span> and
-                            its potential to solve real-world problems. I've worked on various ML projects including nanoplastic classification
-                            and flight delay prediction systems, combining my software engineering skills with data science.
-                        </p>
-
-                        <p className="text-lg text-dark-300 leading-relaxed">
-                            Currently pursuing my <span className="text-primary-400 font-semibold">B.Tech in Computer Science and Engineering</span> at
-                            Vellore Institute of Technology, Chennai. I'm constantly learning, building, and pushing the boundaries of what's possible
-                            with code.
-                        </p>
-
-                        <div className="flex flex-wrap gap-4 pt-4">
-                            <div className="flex items-center gap-2 text-dark-300">
-                                <svg className="w-5 h-5 text-primary-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
-                                </svg>
-                                <span>VIT Chennai</span>
+                        {/* Location / Meta chips */}
+                        <div className="flex flex-wrap gap-4 pt-2">
+                            <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.02] rounded-xl border border-white/5 text-dark-300 text-sm font-medium hover:border-primary-500/30 transition-colors">
+                                <span className="text-primary-400">🏫</span>
+                                <span>VIT Chennai Campus</span>
                             </div>
-                            <div className="flex items-center gap-2 text-dark-300">
-                                <svg className="w-5 h-5 text-primary-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                                </svg>
+                            <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.02] rounded-xl border border-white/5 text-dark-300 text-sm font-medium hover:border-primary-500/30 transition-colors">
+                                <span className="text-primary-400">📍</span>
                                 <span>Chennai, India</span>
                             </div>
+                            <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.02] rounded-xl border border-white/5 text-dark-300 text-sm font-medium hover:border-primary-500/30 transition-colors">
+                                <span className="text-primary-400">📧</span>
+                                <a href="mailto:shubhamkrsinha11111@gmail.com" className="hover:text-primary-400 transition-colors">shubhamkrsinha11111@gmail.com</a>
+                            </div>
+                        </div>
+
+                        {/* Interactive HUD Grid Cards */}
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6">
+                            {metrics.map((m, idx) => (
+                                <div
+                                    key={idx}
+                                    className="p-4 bg-white/[0.01] hover:bg-white/[0.03] border border-white/[0.06] hover:border-primary-500/30 rounded-2xl transition-all duration-300 hover:-translate-y-1"
+                                >
+                                    <div className="text-2xl mb-2">{m.icon}</div>
+                                    <div className="text-dark-100 font-bold text-lg font-mono">{m.value}</div>
+                                    <div className="text-dark-400 text-xs font-medium uppercase tracking-wider mb-0.5">{m.label}</div>
+                                    <div className="text-dark-500 text-[10px]">{m.detail}</div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>

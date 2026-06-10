@@ -50,26 +50,31 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="bg-dark-950 border-t border-dark-800">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <footer className="bg-dark-950 border-t border-white/[0.04] py-16 relative overflow-hidden">
+            <div className="absolute inset-0 cyber-dots opacity-10 pointer-events-none"></div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="grid md:grid-cols-12 gap-12 mb-12">
                     {/* Brand */}
-                    <div>
-                        <h3 className="text-2xl font-bold text-gradient mb-4">SKS</h3>
-                        <p className="text-dark-400 leading-relaxed">
-                            Full-Stack MERN Developer & Machine Learning Enthusiast crafting innovative solutions.
+                    <div className="md:col-span-5 space-y-4 text-left">
+                        <div className="flex items-center gap-1.5">
+                            <span className="w-8 h-8 rounded-lg bg-gradient-to-tr from-primary-500 to-fuchsia-500 flex items-center justify-center text-white text-base font-bold shadow-[0_0_15px_rgba(99,102,241,0.4)]">S</span>
+                            <span className="font-extrabold tracking-wider text-xl text-dark-50">Shubham Kumar Sinha</span>
+                        </div>
+                        <p className="text-dark-400 text-sm leading-relaxed max-w-sm font-light">
+                            Full-Stack MERN Developer & Machine Learning Enthusiast crafting performant web systems and data intelligence pipelines.
                         </p>
                     </div>
 
                     {/* Quick Links */}
-                    <div>
-                        <h4 className="text-lg font-semibold text-dark-200 mb-4">Quick Links</h4>
-                        <ul className="space-y-2">
+                    <div className="md:col-span-3 text-left space-y-4">
+                        <h4 className="text-xs font-mono tracking-widest text-primary-400 uppercase">Navigation</h4>
+                        <ul className="grid grid-cols-2 gap-2 text-sm">
                             {quickLinks.map((link) => (
                                 <li key={link.name}>
                                     <a
                                         href={link.href}
-                                        className="text-dark-400 hover:text-primary-400 transition-colors duration-300"
+                                        className="text-dark-400 hover:text-primary-400 transition-colors duration-300 font-light"
                                     >
                                         {link.name}
                                     </a>
@@ -78,29 +83,29 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Social Links */}
-                    <div>
-                        <h4 className="text-lg font-semibold text-dark-200 mb-4">Connect With Me</h4>
-                        <div className="flex gap-4">
+                    {/* Contact & Social Links */}
+                    <div className="md:col-span-4 text-left space-y-4">
+                        <h4 className="text-xs font-mono tracking-widest text-primary-400 uppercase">Connect</h4>
+                        <div className="flex gap-3">
                             {socialLinks.map((social) => (
                                 <a
                                     key={social.name}
                                     href={social.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-dark-400 hover:text-primary-400 transform hover:scale-110 transition-all duration-300"
+                                    className="p-2.5 bg-white/[0.02] border border-white/[0.06] hover:border-primary-500/30 hover:bg-primary-500/10 text-dark-400 hover:text-primary-400 rounded-xl transition-all duration-300"
                                     aria-label={social.name}
                                 >
                                     {social.icon}
                                 </a>
                             ))}
                         </div>
-                        <div className="mt-6">
+                        <div className="pt-2">
                             <a
                                 href="mailto:shubhamkrsinha11111@gmail.com"
-                                className="text-dark-400 hover:text-primary-400 transition-colors duration-300 flex items-center gap-2"
+                                className="text-dark-400 hover:text-primary-400 transition-colors duration-300 flex items-center gap-2 text-sm font-light"
                             >
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-4.5 h-4.5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
                                 shubhamkrsinha11111@gmail.com
@@ -110,12 +115,15 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="border-t border-dark-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-dark-400 text-sm">
+                <div className="border-t border-white/[0.04] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono">
+                    <p className="text-dark-500">
                         © {currentYear} Shubham Kumar Sinha. All rights reserved.
                     </p>
-                    <p className="text-dark-400 text-sm">
-                        Built with <span className="text-primary-400">React</span> & <span className="text-primary-400">Tailwind CSS</span>
+                    <p className="text-dark-500 flex items-center gap-1.5">
+                        Built with 
+                        <span className="text-primary-400">React 19</span> 
+                        & 
+                        <span className="text-primary-400">Tailwind CSS</span>
                     </p>
                 </div>
             </div>
