@@ -28,8 +28,8 @@ const Achievements = () => {
         },
         {
             year: 'Codeforces',
-            title: 'Codeforces Rating: 1100',
-            description: 'Reached a rating of 1100 (Newbie classification) on Codeforces, competing in regular algorithmic challenges against global developers.',
+            title: 'Codeforces Rating: 1200+ (Pupil)',
+            description: 'Reached a rating of 1200+ (Pupil classification) on Codeforces, competing in regular algorithmic challenges against global developers.',
             icon: '⚡',
             link: 'https://codeforces.com/profile/Sammyhero',
             linkText: 'Verify Profile',
@@ -137,14 +137,16 @@ const Achievements = () => {
                             </div>
                             <div className="space-y-1">
                                 <p className="text-dark-400 text-xs font-mono">Global Rank</p>
-                                <h4 className="text-2xl font-black text-dark-50 tracking-tight">1100 Rating</h4>
-                                <p className="text-dark-500 text-[10px] font-light">Division 3-4 Competitor (Newbie rank)</p>
+                                <h4 className="text-2xl font-black text-dark-50 tracking-tight">1200+ Rating</h4>
+                                <p className="text-dark-500 text-[10px] font-light">Division 3-4 Competitor (Pupil rank)</p>
                             </div>
                         </a>
 
                         {/* Creative Art gateway card */}
                         <a
-                            href="#"
+                            href="https://my-artwork-gallary.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="p-6 bg-dark-900/20 backdrop-blur-xl border border-white/5 rounded-2xl hover:border-fuchsia-500/30 hover:shadow-[0_0_25px_rgba(217,70,239,0.1)] transition-all duration-300 group flex flex-col justify-between"
                         >
                             <div className="flex items-center justify-between mb-6">
